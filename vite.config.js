@@ -2,10 +2,11 @@ import { defineConfig } from "vite";
 import tailwindcss from "tailwindcss";
 
 export default defineConfig({
-plugins: [],
+  base: '/jadoo-poc/',
+  plugins: [],
   css: {
-   postcss: {
-    plugins: [tailwindcss()],
-   },
+    postcss: {
+      plugins: [tailwindcss()],
+    },
   },
 });
