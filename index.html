@@ -4,83 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>Jadoo - Travel, enjoy and live a new and full life.</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Volkhov:wght@700&display=swap"
         rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                container: {
-                    center: true,
-                    screens: {
-                        sm: '600px',
-                        md: '728px',
-                        lg: '984px',
-                        xl: '1180px',
-                    },
-                    padding: '1rem'
-                },
-                fontFamily: {
-                    display: ['Volkhov', 'serif'],
-                    body: ['Poppins', 'sans-serif']
-                },
-                extend: {
-                    colors: {
-                        text: '#212832',
-                        'text-light': '#5E6282',
-                        primary: {
-                            '50': '#fffcea',
-                            '100': '#fff7c5',
-                            '200': '#fff086',
-                            '300': '#ffe146',
-                            '400': '#ffd01c',
-                            DEFAULT: '#f1a501',
-                            '500': '#f1a501',
-                            '600': '#e18400',
-                            '700': '#bb5c02',
-                            '800': '#974709',
-                            '900': '#7c3a0b',
-                            '950': '#481d00',
-                        },
-                        secondary: '#DF6951',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        .decorative-underline:after {
-            content: '';
-            position: absolute;
-            bottom: 18.348624%;
-            left: -8.65%;
-            right: -17.3%;
-            height: 11%;
-            z-index: -1;
-            background-image: url("./img/DecorativeUnderline.png");
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .mobile-nav {
-            transition: all ease-in-out 200ms;
-        }
-
-        .mobile-nav[data-mobile-menu-state="closed"] {
-            transform: translateX(100%);
-        }
-    </style>
-
-    <script src="js/index.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/index.js" type="module"></script>
 </head>
 
 <body style="background-image: url('./img/Decore.svg')" class="bg-no-repeat bg-right-top font-body text-text-light">
@@ -154,7 +87,9 @@
                     sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
 
                 <div class="mt-8 mb-12 lg:mb-0">
-                    <button class="py-4 px-6 bg-primary hover:bg-primary-700 transition-colors rounded-xl text-white">Find out more</button>
+                    <button
+                        class="py-4 px-6 bg-primary hover:bg-primary-600 transition-colors rounded-xl text-white">Find
+                        out more</button>
                 </div>
             </div>
             <div class="relative">
@@ -171,6 +106,205 @@
             </div>
         </div>
     </section>
+
+    <section class="my-28">
+        <div class="container">
+            <header class="text-center">
+                <p class="font-semibold lg:text-lg">Top Selling</p>
+                <h2 class="font-display text-3xl lg:text-5xl text-text-dark mt-2">Popular Destinations</h2>
+            </header>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-9 mt-16 relative">
+                <a href="#">
+                    <div class="card drop-shadow-xl hover:scale-[105%] hover:-rotate-[3deg] transition-transform transform-gpu">
+                        <img src="./img/Rome.png" alt="The Colosseum in Rome" class="object-cover w-full h-[327px] object-top">
+                        <div class="bg-white p-4 rounded-b-3xl">
+                            <p class="flex justify-between text-text-dark">
+                                <span>Rome, Italy</span>
+                                <span>$5.4k</span>
+                            </p>
+                            <p id="weather-rome" class="text-sm mt-1 text-text-light"></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card drop-shadow-xl hover:scale-[108%] transition-transform transform-gpu">
+                        <img src="./img/London.png" alt="Big Ben clocktower in London" class="object-cover w-full h-[327px] object-top">
+                        <div class="bg-white p-4 rounded-b-3xl">
+                            <p class="flex justify-between text-text-dark">
+                                <span>London, England</span>
+                                <span>$4.2k</span>
+                            </p>
+                            <p id="weather-london" class="text-sm mt-1 text-text-light"></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="card drop-shadow-xl hover:scale-[105%] hover:rotate-[3deg] transition-transform transform-gpu relative z-10">
+                        <img src="./img/Helsinki.png" alt="The Helsinki Cathedral in Helsinki" class="object-cover w-full h-[327px] object-top">
+                        <div class="bg-white p-4 rounded-b-3xl">
+                            <p class="flex justify-between text-text-dark">
+                                <span>Helsinki, Finland</span>
+                                <span>$6.1k</span>
+                            </p>
+                            <p id="weather-helsinki" class="text-sm mt-1 text-text-light"></p>
+                        </div>
+                    </div>
+                </a>
+                <img src="./img/Scribbles.svg" alt="" class="absolute bottom-12 -right-16 z-0 hidden lg:block" />
+            </div>
+        </div>
+    </section>
+
+    <section class="my-28">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-center">
+                <div>
+                    <p class="font-semibold lg:text-lg">Easy and Fast</p>
+                    <h2 class="font-display text-3xl lg:text-5xl text-text-dark mt-2">Book Your Next Trip In&nbsp;3&nbsp;Easy&nbsp;Steps</h2>
+
+                    <ul class="mt-8 max-w-md">
+                        <li class="flex mb-12 items-center">
+                            <img src="./img/Icon-Box.svg" alt="" class="mr-6">
+                            <div>
+                                <strong>Choose Destination</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
+                            </div>
+                        </li>
+                        <li class="flex mb-12 items-center">
+                            <img src="./img/Icon-Swim.svg" alt="" class="mr-6">
+                            <div>
+                                <strong>Make Payment</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <img src="./img/Icon-Taxi.svg" alt="" class="mr-6">
+                            <div>
+                                <strong>Reach Airport on Selected Date</strong>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <img src="./img/3Steps.png" alt="Screenshots from the fictional app showing simple user interface">
+            </div>
+        </div>
+    </section>
+
+    <section class="my-28">
+        <div class="container px-0">
+            <header class="text-center px-4 mb-4 lg:mb-8">
+                <p class="font-semibold lg:text-lg">Testimonials</p>
+                <h2 class="font-display text-3xl lg:text-5xl text-text-dark mt-2">What People Say About&nbsp;Us</h2>
+            </header>
+            <section class="splide max-w-4xl mx-auto" aria-label="Testimonials Slider">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide mx-8 my-12 max-w-[80vw] w-4/5">
+                            <div class="bg-white rounded px-6 py-4 relative drop-shadow-xl left-4">
+                                <img src="./img/Headshot.png" alt="" class="rounded-full w-10 h-10 absolute -left-5 -top-5">
+                                <blockquote class="text-sm mb-4">
+                                    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted&nbsp;no."
+                                </blockquote>
+                                <p>
+                                    <strong class="text-sm">Mike Taylor</strong>
+                                    <span class="text-xs block">CEO of Red Button</span>
+                                </p>
+                            </div>
+                          </li>
+                          <li class="splide__slide mx-8 my-12 max-w-[80vw] w-4/5">
+                            <div class="bg-white rounded px-6 py-4 relative drop-shadow-xl left-4">
+                                <img src="./img/Headshot2.jpeg" alt="" class="rounded-full w-10 h-10 absolute -left-5 -top-5">
+                                <blockquote class="text-sm mb-4">
+                                    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted&nbsp;no."
+                                </blockquote>
+                                <p>
+                                    <strong class="text-sm">Dee Wilkerson</strong>
+                                    <span class="text-xs block">Internist, Manu Connection</span>
+                                </p>
+                            </div>
+                          </li>
+                          <li class="splide__slide mx-8 my-12 max-w-[80vw] w-4/5">
+                            <div class="bg-white rounded px-6 py-4 relative drop-shadow-xl left-4">
+                                <img src="./img/Headshot3.jpeg" alt="" class="rounded-full w-10 h-10 absolute -left-5 -top-5">
+                                <blockquote class="text-sm mb-4">
+                                    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted&nbsp;no."
+                                </blockquote>
+                                <p>
+                                    <strong class="text-sm">Rosemary Poling</strong>
+                                    <span class="text-xs block">Chef, MVP Sports</span>
+                                </p>
+                            </div>
+                          </li>
+                          <li class="splide__slide mx-8 my-12 max-w-[80vw] w-4/5">
+                            <div class="bg-white rounded px-6 py-4 relative drop-shadow-xl left-4">
+                                <img src="./img/Headshot4.jpeg" alt="" class="rounded-full w-10 h-10 absolute -left-5 -top-5">
+                                <blockquote class="text-sm mb-4">
+                                    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted&nbsp;no."
+                                </blockquote>
+                                <p>
+                                    <strong class="text-sm">Jackie Guzman</strong>
+                                    <span class="text-xs block">Concierge, A+ Electronics</span>
+                                </p>
+                            </div>
+                          </li>
+                      </ul>
+                </div>
+              </section>
+        </div>
+    </section>
+
+    <section class="my-28">
+        <div class="container bg-cover py-8 lg:py-16 md:px-8 lg:px-12 relative" style="background-image: url('./img/SubscribeBG.png');">
+            <img src="./img/PaperPlane.svg" alt="" class="absolute -top-6 -right-6 hidden lg:block">
+            <h2 class="text-center text-lg md:text-2xl lg:text-3xl font-semibold max-w-4xl mx-auto px-4">Subscribe to get fresh information, the latest news, and other interesting offers from Jadoo.</h2>
+            <form action="" class="flex flex-col md:flex-row max-w-2xl mx-auto mt-8 lg:mt-16 gap-6">
+                <label for="email" class="flex rounded-md bg-white h-10 lg:h-16 px-4 items-center w-full">
+                    <span class="sr-only">Your Email Address</span>
+                    <img src="./img/ContactIcon.svg" alt="" class="mr-4">
+                    <input type="email" name="email" id="email" placeholder="Your email">
+                </label>
+                <div>
+                    <button type="submit" class="h-10 lg:h-16 w-full px-4 rounded-md text-white bg-gradient-to-b from-[#FF946D] to-[#FF7D68]">Subscribe</button>
+                </div>
+            </form>
+            <img src="./img/ContactFlourish.png" alt="" class="absolute -bottom-16 -right-24 hidden lg:block">
+        </div>
+    </section>
+
+    <footer class="mt-28">
+        <div class="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center lg:text-left">
+            <div class="md:col-span-3 lg:col-span-1">
+                <p class="text-text-dark text-4xl mb-4">Jadoo.</p>
+                <p class="text-text-light text-sm w-4/5 mx-auto lg:mx-0">Book your trip in minute, get full control for much longer.</p>
+            </div>
+            <nav>
+                <p class="mb-4"><strong>Company</strong></p>
+                <ul>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">About</a></li>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Careers</a></li>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Mobile</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <p class="mb-4"><strong>Contact</strong></p>
+                <ul>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Help/FAQ</a></li>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Press</a></li>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Affiliates</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <p class="mb-4"><strong>More</strong></p>
+                <ul>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Airline Fees</a></li>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Airlines</a></li>
+                    <li><a class="hover:text-secondary transition-colors py-2 inline-block" href="#">Low Fare Tips</a></li>
+                </ul>
+            </nav>
+            <p class="text-center text-xs md:col-span-3 lg:col-span-4 py-4">All rights reserved. &copy; 2024 jadoo.co</p>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.decorative-underline:after {
+    content: '';
+    position: absolute;
+    bottom: 18.348624%;
+    left: -8.65%;
+    right: -17.3%;
+    height: 11%;
+    z-index: -1;
+    background-image: url("../img/DecorativeUnderline.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mobile-nav {
+    transition: all ease-in-out 200ms;
+}
+
+.mobile-nav[data-mobile-menu-state="closed"] {
+    transform: translateX(100%);
+}
+
+.card {
+    backface-visibility: hidden;
+}
+
+.splide__pagination__page.is-active {
+    outline: 1px solid #ccc;
+    transform: scale(0.9);
+}
+
+@media (min-width: 641px) {
+    .splide__track:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 15%;
+        background-image: linear-gradient(to right, #fff 0%, transparent 100%);
+        z-index: 20;
+    }
+    
+    .splide__track:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 15%;
+        background-image: linear-gradient(to left, #fff 0%, transparent 100%);
+        z-index: 20;
+    }
+}
+
+.splide__arrow {
+    margin-top: 140px;
+    background: transparent;
+    outline: 1px solid #ccc;
+}
