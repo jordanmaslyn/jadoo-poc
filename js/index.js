@@ -139,7 +139,7 @@ function initSlider() {
         perPage: 1,
         autoWidth: true,
         breakpoints: {
-            960: {
+            768: {
                 padding: "15%",
             },
             1180: {
